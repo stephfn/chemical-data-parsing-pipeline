@@ -29,3 +29,29 @@ chemical-data-parsing-pipeline/
 ├── resolved_chemical_catalog_map.csv      # Stage 2 Output: Multi-vendor catalog mapping table
 ├── .gitignore                             # Excludes checkpoints, pycache, and temporary files
 └── README.md                              # Project documentation
+
+---
+
+## 🛠️ Pipeline Modules & Technical Highlights
+
+### **1. SDS Field Parsing Engine (`01_unstructured_sds_parsing.ipynb`)**
+* **CAS Registry Numbers:** Pattern matching for standard CAS formats (`\b[1-9]\d{1,6}-\d{2}-\d\b`).
+* **GHS Codes:** Automatic extraction of `H-Codes` (Hazard) and `P-Codes` (Precautionary).
+* **Iterative Regex Refinement (Purity Specs):** Upgraded initial regex (`v1`) to `v2` (`(?:>=|>|≥)?\s*\b\d{2,3}(?:\.\d{1,3})?\s*%`) to accommodate domain edge cases such as `>= 99.5%`, `98.0% min`, and multi-decimal purity assays.
+
+### **2. Entity Resolution & Deduplication (`02_chemical_entity_resolution.ipynb`)**
+* **Character 3-Gram TF-IDF Vectorization:** Captures sub-string and morphological similarities without relying on hardcoded synonym dictionaries.
+* **Cosine Similarity Scoring:** Pairwise comparison between raw vendor catalog listings and the canonical registry.
+* **Automated Confidence Triage:**
+  * **Similarity $\ge$ 0.45:** `MATCH_HIGH_CONFIDENCE` (Auto-mapped to Master ID).
+  * **Similarity 0.20 – 0.44:** `NEEDS_HUMAN_REVIEW` (Flagged for human-in-the-loop validation).
+  * **Similarity < 0.20:** `NO_MATCH_FOUND` (Prevents database corruption from unlisted compounds).
+
+---
+
+## 🚀 Quickstart & Reproduction
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/stephfn/chemical-data-parsing-pipeline.git](https://github.com/stephfn/chemical-data-parsing-pipeline.git)
+   cd chemical-data-parsing-pipeline
