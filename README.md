@@ -29,6 +29,7 @@ chemical-data-parsing-pipeline/
 ├── resolved_chemical_catalog_map.csv      # Stage 2 Output: Multi-vendor catalog mapping table
 ├── .gitignore                             # Excludes checkpoints, pycache, and temporary files
 └── README.md                              # Project documentation
+```
 
 ---
 
