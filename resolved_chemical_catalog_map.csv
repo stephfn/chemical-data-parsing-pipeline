@@ -1,0 +1,7 @@
+vendor_sku,raw_vendor_title,matched_master_id,matched_canonical_name,matched_cas_number,similarity_score,match_status
+SIG-8821,"2-Propanol / Isopropyl Alcohol (IPA), ACS Reagent 99.5%",CHEM-001,Isopropanol,67-63-0,0.9467,MATCH_HIGH_CONFIDENCE
+FISH-1029,"Acetone, HPLC Grade, >=99.9%",CHEM-002,Acetone,67-64-1,1.0,MATCH_HIGH_CONFIDENCE
+VWR-4412,"Sodium Hydroxide Pellets, ACS Reagent Grade",CHEM-003,Sodium Hydroxide,1310-73-2,1.0,MATCH_HIGH_CONFIDENCE
+SIG-3301,"THF (Tetrahydrofuran), Anhydrous, 99.9%",CHEM-004,Tetrahydrofuran,109-99-9,0.953,MATCH_HIGH_CONFIDENCE
+VWR-9981,"Methylene Chloride (Dichloromethane), ACS Grade",CHEM-005,Dichloromethane,75-09-2,0.927,MATCH_HIGH_CONFIDENCE
+UNKNOWN-01,Novel Polymeric Catalyst Matrix X-100,N/A,N/A,N/A,0.0,NO_MATCH_FOUND
