@@ -1,5 +1,5 @@
-cas_number,purity_spec,grade_spec,hazard_h_codes,precaution_p_codes
-77-92-9,N/A,ACS Reagent,H319,"P264, P280"
-64-17-5,99.9%,HPLC Grade,"H225, H319","P210, P233, P240, P280"
-1310-73-2,N/A,ACS Grade,"H314, H290","P260, P280, P305, P351, P338"
-67-64-1,N/A,ReagentACS,"H225, H319, H336","P210, P261, P305, P351, P338"
+cas_number,cas_valid,purity_spec,grade_spec,hazard_h_codes,precaution_p_codes
+77-92-9,True,99.0%,ACS Reagent,H319,"P264, P280"
+64-17-5,True,99.9%,HPLC Grade,"H225, H319","P210, P233, P240, P280"
+1310-73-2,True,98.0%,ACS Grade,"H314, H290","P260, P280, P305+P351+P338"
+67-64-1,True,99.5%,ACS Reagent,"H225, H319, H336","P210, P261, P305+P351+P338"
